@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q CLI Bulk Ticket System</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; }
+        .section { margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .download-btn { background: #27ae60; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; margin: 10px 0; }
+        .download-btn:hover { background: #229954; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 4px; font-family: monospace; margin: 10px 0; }
+        .step { background: #e8f4fd; padding: 15px; margin: 10px 0; border-left: 4px solid #3498db; }
+        .warning { background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 10px 0; }
+        .success { background: #d4edda; padding: 15px; border-left: 4px solid #28a745; margin: 10px 0; }
+        ul, ol { padding-left: 20px; }
+        li { margin: 8px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎫 Q CLI Bulk Ticket System</h1>
+        <p style="text-align: center; color: #666;">GitHub-hosted templates + Local Q CLI execution = REAL tickets on t.corp.amazon.com</p>
+        
+        <div class="section">
+            <h2>📥 Download Excel Template</h2>
+            <p>Download the Excel template, fill it with your ticket data:</p>
+            <a href="templates/ticket_creation_template.xlsx" class="download-btn">📄 Download Ticket Template</a>
+            
+            <div class="warning">
+                <strong>📋 Required Columns:</strong> Title, Description<br>
+                <strong>🔧 Optional Columns:</strong> Severity (SEV_3, SEV_4, SEV_5), Category, Type, Item
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 How to Create REAL Tickets</h2>
+            
+            <div class="step">
+                <strong>Step 1:</strong> Clone this repository locally
+                <div class="code">git clone https://github.com/yourusername/bulk-ticket-system.git<br>cd bulk-ticket-system</div>
+            </div>
+            
+            <div class="step">
+                <strong>Step 2:</strong> Place your filled Excel file in the repo root
+                <div class="code">cp ~/my_tickets.xlsx ./</div>
+            </div>
+            
+            <div class="step">
+                <strong>Step 3:</strong> Run Q CLI script (creates REAL tickets!)
+                <div class="code">q chat -f scripts/qcli_github_script.py</div>
+            </div>
+            
+            <div class="success">
+                <strong>✅ Result:</strong> REAL tickets created on t.corp.amazon.com using your Q CLI authentication!
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 Why This Approach Works</h2>
+            <ul>
+                <li><strong>✅ Real Q CLI calls</strong> - No fake API responses</li>
+                <li><strong>✅ GitHub hosting</strong> - Templates accessible anywhere</li>
+                <li><strong>✅ Local execution</strong> - Uses your authentication</li>
+                <li><strong>✅ Version control</strong> - Track script changes</li>
+                <li><strong>✅ Shareable</strong> - Anyone can clone and use</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>📋 Current Configuration</h2>
+            <p>Tickets will be created with these parameters:</p>
+            <ul>
+                <li><strong>Assigned Group:</strong> CTFin Analytics Controllership</li>
+                <li><strong>Category:</strong> TRMS</li>
+                <li><strong>Type:</strong> Finance Analytics</li>
+                <li><strong>Item:</strong> Issues</li>
+                <li><strong>Default Severity:</strong> SEV_4</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>🔧 Prerequisites</h2>
+            <ol>
+                <li>Q CLI installed and authenticated</li>
+                <li>Access to t.corp.amazon.com ticketing system</li>
+                <li>Git installed for cloning repository</li>
+                <li>Python 3 with pandas library</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>📞 Support</h2>
+            <p>For issues or questions:</p>
+            <ul>
+                <li>Check the repository README</li>
+                <li>Review the script logs</li>
+                <li>Verify Q CLI authentication</li>
+                <li>Ensure Excel template format is correct</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
